@@ -13,6 +13,8 @@ class Location_Taxonomy_Tests extends WP_UnitTestCase {
 	}
 
 	public function test_location_taxonomy_register_taxonomy() {
+		unregister_taxonomy( 'location' );
+
 		$this->assertFalse( taxonomy_exists( 'location' ) );
 
 		location_taxonomy_register_taxonomy();
@@ -23,6 +25,8 @@ class Location_Taxonomy_Tests extends WP_UnitTestCase {
 	}
 
 	public function test_location_taxonomy_register_taxonomy_filter() {
+		unregister_taxonomy( 'location' );
+
 		$this->assertFalse( taxonomy_exists( 'location' ) );
 
 		add_filter(
