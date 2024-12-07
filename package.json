@@ -1,0 +1,33 @@
+{
+  "name": "location-taxonomy",
+  "description": "Registers a hierarchical taxonomy to associate your posts with locations.",
+  "license": "GPL-2.0-or-later",
+  "keywords": [
+    "wordpress",
+    "plugin",
+    "location",
+    "taxonomy",
+    "post",
+    "hierarchical"
+  ],
+  "homepage": "https://wordpress.org/plugins/location-taxonomy/",
+  "author": {
+    "name": "Felix Arntz",
+    "email": "hello@felix-arntz.me",
+    "url": "https://felix-arntz.me"
+  },
+  "repository": "git+https://github.com/felixarntz/location-taxonomy.git",
+  "devDependencies": {
+    "@wordpress/env": "^10.13.0"
+  },
+  "scripts": {
+    "format-php": "wp-env run cli --env-cwd=wp-content/plugins/$(basename $(pwd)) composer format",
+    "phpstan": "wp-env run cli --env-cwd=wp-content/plugins/$(basename $(pwd)) composer phpstan",
+    "lint-php": "wp-env run cli --env-cwd=wp-content/plugins/$(basename $(pwd)) composer lint",
+    "pretest-php": "wp-env run tests-cli --env-cwd=wp-content/plugins/$(basename $(pwd)) composer update",
+    "test-php": "wp-env run tests-cli --env-cwd=wp-content/plugins/$(basename $(pwd)) vendor/bin/phpunit -c phpunit.xml.dist --verbose",
+    "pretest-php-multisite": "wp-env run tests-cli --env-cwd=wp-content/plugins/$(basename $(pwd)) composer update",
+    "test-php-multisite": "wp-env run tests-cli --env-cwd=wp-content/plugins/$(basename $(pwd)) vendor/bin/phpunit -c tests/phpunit/multisite.xml --verbose",
+    "wp-env": "wp-env"
+  }
+}
