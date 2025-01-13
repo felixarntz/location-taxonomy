@@ -29,7 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @since 1.0.0
  */
-function location_taxonomy_register_taxonomy(): void {
+function loctax_register_taxonomy(): void {
 	$post_types = array( 'post' );
 
 	/**
@@ -39,7 +39,7 @@ function location_taxonomy_register_taxonomy(): void {
 	 *
 	 * @param string[] $post_types Array of post type slugs.
 	 */
-	$post_types = (array) apply_filters( 'location_taxonomy_post_types', $post_types );
+	$post_types = (array) apply_filters( 'loctax_post_types', $post_types );
 
 	register_taxonomy(
 		'location',
@@ -82,4 +82,4 @@ function location_taxonomy_register_taxonomy(): void {
 		)
 	);
 }
-add_action( 'init', 'location_taxonomy_register_taxonomy' );
+add_action( 'init', 'loctax_register_taxonomy' );

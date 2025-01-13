@@ -33,13 +33,13 @@ This plugin doesn't come with a settings screen or options of any kind. Once you
 
 = How can I modify for which post types the location taxonomy is available? =
 
-This is very straightforward using the built-in filter `location_taxonomy_post_types`.
+This is very straightforward using the built-in filter `loctax_post_types`.
 
 For example, the following snippet would additionally show the taxonomy for pages:
 
 `
 add_filter(
-	'location_taxonomy_post_types',
+	'loctax_post_types',
 	function ( $post_types ) {
 		$post_types[] = 'page';
 		return $post_types;
