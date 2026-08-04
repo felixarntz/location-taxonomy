@@ -11,7 +11,7 @@
  * Description: Registers a hierarchical taxonomy to associate your posts with locations.
  * Version: 1.0.0
  * Requires at least: 6.0
- * Requires PHP: 7.2
+ * Requires PHP: 7.4
  * Author: Felix Arntz
  * Author URI: https://felix-arntz.me
  * License: GPLv2 or later
