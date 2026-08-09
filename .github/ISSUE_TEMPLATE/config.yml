@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support Request
+    url: https://wordpress.org/support/plugin/location-taxonomy/
+    about: Ask for help in the Location Taxonomy support forum.
