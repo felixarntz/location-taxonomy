@@ -38,10 +38,6 @@
     }
   },
   "scripts": {
-    "format": [
-      "composer --working-dir=tools/php/lint install",
-      "tools/php/lint/vendor/bin/phpcbf --standard=phpcs.xml.dist"
-    ],
     "lint": [
       "@phpcs",
       "@phpstan"
@@ -55,6 +51,10 @@
       "tools/php/lint/vendor/bin/phpstan analyse --memory-limit=2048M"
     ],
     "test": "phpunit -c phpunit.xml.dist --verbose",
-    "test-multisite": "WP_MULTISITE=1 phpunit -c tests/phpunit/multisite.xml --verbose"
+    "test-multisite": "WP_MULTISITE=1 phpunit -c tests/phpunit/multisite.xml --verbose",
+    "fix": [
+      "composer --working-dir=tools/php/lint install",
+      "tools/php/lint/vendor/bin/phpcbf --standard=phpcs.xml.dist"
+    ]
   }
 }
